@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a temporary link element
         const link = document.createElement('a');
         // Set the link's href to the resume file path. You'll need to replace this with the actual path to your resume.
-        link.href = 'https://drive.google.com/file/d/1trA1aqYzkf7myS5cykNHDi5cMydXKAsk/view?usp=drive_link'; 
+        link.href = 'https://drive.google.com/uc?export=download&id=1trA1aqYzkf7myS5cykNHDi5cMydXKAsk'; 
         // Set the download attribute with the desired filename
         link.download = 'Siam_Hossain_Resume.pdf';
         
