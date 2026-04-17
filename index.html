@@ -1,263 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siam's Protfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Siam Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="home">
-        <div id="nav">
-            <div id="name">
-                <h1>Siam's Portfolio</h1>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Siam</span>
             </div>
-            <div id="menu">
-                <ul id="menu-ul">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <!-- <div id="resume">
-                
-            </div> -->
-            <button id="download_resume">Download Resume</button>
 
-        </div>
-        <div class="identity">
-            <div class="main_l">
-                <div class="l1">
-                    <h3>Hi I am Siam Hossain</h3>
-                </div>
-                <div class="l2">
-                    <h1>Web Developer</h1>
-                </div>
-                <div class="l3">
-                    <h4>Based in Bangladesh</h4>
-                </div>
-                <div class="l4">
-                    <a href="https://www.facebook.com/mdevrahim.fakir.1/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                            alt="Facebook" width="35" style="vertical-align: middle;margin-right: 8px;">
-                    </a>
-                    <a href="https://www.linkedin.com/in/siam-hossain-33305a25b/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="Linkdin"
-                            width="35" style="vertical-align: middle; margin-right: 8px;">
-                    </a>
-                    <a href="https://github.com/hossainsiam133" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                            alt="GitHub" width="35" style="vertical-align: middle;margin-right: 8px;">
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="about-me" id="about">
-            <h1 class="About">ABOUT ME</h1>
-            <div class="siam-info">
-                <div class="img-siam">
-                </div>
-                <div class="exp">
-                    <div class="txt">
-                        Hi, I am Siam Hossain, a passionate PHP Developer with 1+ years of experience. I
-                        have a strong foundation in front-end and back-end development, and I thrive in creating dynamic
-                        and interactive user experiences. I always want to stay up to date by learning new technologies.
+            <!-- ADD THIS MODE TOGGLE HERE -->
+    <div class="mode-toggle-container" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+        <div class="mode-toggle">
+            <input type="checkbox" id="modeSwitch" class="mode-switch">
+            <label for="modeSwitch" class="mode-label">
+                <span class="mode-text light-text">Light</span>
+                <div class="toggle-slider">
+                    <div class="slider-icon">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-rocket space-icon"></i>
                     </div>
-                    <div class="overview">
-                        <div style="margin-right: 50px;" class="box">
-                            <h1 style="margin: 0; font-size: 100px;">
-                                3+
-                            </h1>
-                            <h2 style="font-size: 30px; margin: 0;text-align: center;">
-                                Completed Projects
-                            </h2>
+                </div>
+                <span class="mode-text space-text">Space</span>
+            </label>
+        </div>
+    </div>
+
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#specialization">Specialization</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#activities">Activities</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#specialization">Specialization</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#activities">Activities</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="assets/devOpsGif.gif" alt="Nazrana">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+                    Hey I'm <span>Siam Hossain</span>
+                </h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                    I am&nbsp;&nbsp;<span id="changing-text"></span>
+                </div>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    B.Sc. CSE Undergraduate | Future Software Engineer with a passion for innovation
+                </p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/hossainsiam133"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/mdevrahim.fakir.1/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/siam-hossain221/"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                </div>
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                    <button onclick="window.open('documents/CV_Siam.pdf')">Download CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content-wrapper">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1200">
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm <b>Siam</b>, I've been curious about computers and technology since I was a school boy, always wondering how Google works and how tech is created.
+                    </p>
+                    <p>
+                        I've also loved mathematics, physics, and astronomy since childhood, fascinated by how stars shine, galaxies move, and the universe works.
+                    </p>
+                    <p>
+                        I studied science in SSC and HSC, and I'm now graduating with a BSc in Computer Science. My curiosity has grown into a passion for learning, coding, and pursuing research, with dreams of becoming high qualified Software Engineer.
+                    </p>
+                </div>
+                <div class="about-img" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="assets/ProfilePic1.jpg" alt="Nazrana About Photo">
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="education-section" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                <h3 class="education-title">My Education</h3>
+                <div class="education-grid">
+                    <div class="education-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
+                        <div class="education-logo">
+                            <img src="assets/RpsuLogo.png" alt="University Logo">
                         </div>
-                        <div style="margin-right: 60px;" class="box">
-                            <h1 style="margin: 0; font-size: 100px;">
-                                1+
-                            </h1>
-                            <h2 style="font-size: 30px; margin: 0;text-align: center;">
-                                Years Experience
-                            </h2>
+                        <div class="education-name">R. P. Shaha University</div>
+                        <div class="education-degree">Bachelor of Computer Science and Engineering</div>
+                        <div class="education-year">CGPA: 3.50</div>
+                        <div class="education-year">2023 - 2026</div>
+                    </div>
+                    <div class="education-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
+                        <div class="education-logo">
+                            <img src="assets/TolaramLogo.jpg" alt="College Logo">
+                        </div>
+                        <div class="education-name">Govt. Tolaram College</div>
+                        <div class="education-degree">Higher Secondary Certificate</div>
+                        <div class="education-year">GPA: 4.67</div>
+                        <div class="education-year">2018 - 2020</div>
+                    </div>
+                    <div class="education-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="500">
+                        <div class="education-logo">
+                            <img src="assets/SbbhsLogo.jpg" alt="School Logo">
+                        </div>
+                        <div class="education-name">Syedpur Bangabandhu High School</div>
+                        <div class="education-degree">Secondary School Certificate</div>
+                        <div class="education-year">GPA: 4.89</div>
+                        <div class="education-year">2013 - 2018</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+   <section id="my-main-skill">
+  <div class="mainskill-container">
+    <h2 class="mainskill-title" data-aos="fade-down" data-aos-duration="1000">My Specialization</h2>
+    
+    <div class="main_skill-grid">
+      <!-- Web Dev Card -->
+      <div class="skill-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <img src="assets/WebSkill.jpg" alt="AI" class="skill-img">
+        <h3 class="skill-name">Web Development</h3>
+        <p class="skill-description">Architecting end-to-end web solutions by bridging the gap between intuitive client-side experiences and scalable server-side systems.</p>
+      </div>
+      <!-- Desktop App Card -->
+      <div class="skill-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <img src="assets/DesktopSkill.png" alt="AI" class="skill-img">
+        <h3 class="skill-name">Desktop Application</h3>
+        <p class="skill-description">Developing versatile desktop solutions that offer a consistent user experience across multiple operating systems through a single, optimized codebase.</p>
+      </div>
+      <!-- AI Card -->
+      <div class="skill-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <img src="assets/Artificial-Intelligence.jpg" alt="AI" class="skill-img">
+        <h3 class="skill-name">Artificial Intelligence</h3>
+        <p class="skill-description">Building intelligent systems, neural networks, and AI projects that solve real-world problems through machine learning algorithms and deep learning frameworks.</p>
+      </div>
+
+      <!-- ML Card -->
+      <div class="skill-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+        <img src="assets/Machine Learning.jpg" alt="ML" class="skill-img">
+        <h3 class="skill-name">Machine Learning</h3>
+        <p class="skill-description">Creating predictive models, data processing pipelines, and ML solutions using Python, TensorFlow, and scikit-learn for data-driven insights.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+          
+  <!-- Skills Section with Circles -->
+  <section id="skills">
+    <div class="skills-container">
+      <h2 class="skills-title" data-aos="fade-down" data-aos-duration="1000">Supporting Skills</h2>
+      
+      <div class="skills-grid">
+        <!-- Skill Circle 1 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+          <img src="assets/C.png" alt="C Programming">
+        </div>
+        
+        <!-- Skill Circle 2 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/cpp.jpeg" alt="C++">
+        </div>
+        
+        <!-- Skill Circle 3 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+          <img src="assets/html,css,js.jpeg" alt="HTML, CSS, JS">
+        </div>
+        
+        <!-- Skill Circle 4 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+          <img src="assets/Python.jpg" alt="Python">
+        </div>
+        
+        <!-- Skill Circle 5 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+          <img src="assets/MongoDB.png" alt="MongoDB">
+        </div>
+        
+        <!-- Skill Circle 6 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+          <img src="assets/Oracle.png" alt="Oracle">
+        </div>
+        
+        <!-- Skill Circle 7 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">
+          <img src="assets/JAVA.png" alt="Java">
+        </div>
+        
+        <!-- Skill Circle 8 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
+          <img src="assets/git and github.png" alt="Git and GitHub">
+        </div>
+        
+        <!-- Skill Circle 9 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900">
+          <img src="assets/adobe ps and ai.png" alt="Adobe Photoshop and Illustrator">
+        </div>
+        
+        <!-- Skill Circle 10 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+          <img src="assets/DSA & Algo.png" alt="DSA">
+        </div>
+
+        <!-- Skill Circle 11 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1100">
+          <img src="assets/AI & ML.jpeg" alt="AI & ML">
+        </div>
+
+        <!-- Skill Circle 12 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1200">
+          <img src="assets/Android_Studio.png" alt="Android Studio">
+        </div>
+
+        <!-- Skill Circle 13 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1300">
+          <img src="assets/vs code.png" alt="VS Code">
+        </div>
+
+        <!-- Skill Circle 14 -->
+        <div class="skill-circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1400">
+          <img src="assets/figma.png" alt="Figma">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects-container">
+      <h2 class="projects-title" data-aos="fade-down" data-aos-duration="1000">My Projects</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="project-image"></div>
+          <div class="project-content">
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-description">
+              A responsive personal portfolio website showcasing my skills, projects, and experience. Built with modern web technologies and smooth animations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">AOS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="project-image"></div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce App</h3>
+            <p class="project-description">
+              A full-featured e-commerce application with user authentication, product catalog, shopping cart, and payment integration.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Stripe</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
+          <div class="project-image"></div>
+          <div class="project-content">
+            <h3 class="project-title">Task Management Tool</h3>
+            <p class="project-description">
+              A collaborative task management application with real-time updates, team collaboration features, and progress tracking.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">Vuetify</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary">Live Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Activities Section with Beautiful Enhanced Design -->
+    <section id="activities">
+        <div class="activities-container">
+            <h2 class="activities-title" data-aos="fade-down" data-aos-duration="1000">
+                My Achievements Beyond Academics
+                <div class="activities-title-underline"></div>
+            </h2>
+            <p class="album-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                Exploring passions beyond academics
+            </p>
+
+            <div class="activity-showcase" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+                <!-- Left Button -->
+                <button class="nav-button nav-left" onclick="previousActivity()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Activity Card -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img id="activity-img" src="https://via.placeholder.com/450x240?text=Photography+Club" alt="Activity">
+                    </div>
+                    <div class="activity-content">
+                        <h3 id="activity-title" class="activity-title">Photography Club</h3>
+                        <p id="activity-description" class="activity-description">I love capturing moments and telling stories through the lens.</p>
+                        <div class="activity-counter">
+                            <span id="current-activity">1</span> / <span id="total-activities">3</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="projects" id="project">
-            <h1 class="pro">PROJECTS</h1>
-            <div class="project-list">
-                <div id="pro-img1">
 
-                </div>
-                <div class="pro-details">
-                    <h1>Tailor Made</h1>
-                    <p>Full-Stack E-commerce Platform</p>
-                    <p>HTM | CSS | JavaScript | PHP | MySQL | Wasmer.io</p>
-                    <div class="pro-button">
-                        <button><a href="https://github.com/hossainsiam133/Tailor-Made" target="_blank">
-                                <img class="img-background"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                                    alt="GitHub" width="35" style="vertical-align: middle;margin-right: 8px;">
-                            </a><span class="but-span1">Code</span></button>
-                             <button><a href="https://php-8547b.wasmer.app/" target="_blank">
-                                <img class="img-background"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                                    alt="GitHub" width="35" style="vertical-align: middle;margin-right: 8px;">
-                            </a><span class="but-span1">LIVE SITE</span></button>
-                            
-                    </div>
-                </div>
+                <!-- Right Button -->
+                <button class="nav-button nav-right" onclick="nextActivity()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="project-list">
-                <div id="pro-img2">
+        </div>
+    </section>
 
-                </div>
-                <div class="pro-details">
-                    <h1>Election Management System</h1>
-                    <p>Desktop-Based Java Swing application</p>
-                    <p>Java | Java Swing | MySQL | JDBC | NetBeans</p>
-                    <div class="pro-button">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            offset: 100,
+        });
 
-                        <button><a href="https://github.com/hossainsiam133/Election-Management-System/archive/refs/heads/main.zip" target="_blank">
-                                <img class="img-background"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                                    alt="GitHub" width="35" style="vertical-align: middle;margin-right: 8px;">
-                            </a><span class="but-span1">Zip Folder</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="project-list">
-                <div id="pro-img3">
 
-                </div>
-                <div class="pro-details">
-                    <h1>Library Management System</h1>
-                    <p>Desktop-Based Java Application</p>
-                    <p>Java | Java Swing | File Handling | VS Code</p>
-                    <div class="pro-button">
-                        <button><a href="https://github.com/hossainsiam133/Library-Management-System/archive/refs/heads/main.zip" target="_blank">
-                                <img class="img-background"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                                    alt="GitHub" width="35" style="vertical-align: middle;margin-right: 8px;">
-                            </a><span class="but-span1">Zip Folder</span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="skills" id="skill">
-            <h1 class="skil">Skills</h1>
-            <div class="language">
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=cpp" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">C++</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=python" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Python</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=html" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">HTML</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=css" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">CSS</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=js" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">JavaScript</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=bootstrap" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">BootStrap</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=git" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">GIT</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=java" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Java</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=php" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">PHP</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=mysql" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">MySql</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=linux" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Linux</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=figma" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Figma</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=laravel" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Laravel</p>
-                </div>
-                <div class="lang">
-                    <img src="https://skillicons.dev/icons?i=arduino" width="100" height="100" class="lang-img" alt="">
-                    <p class="lang-p">Arduino</p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="get_in_touch" id="contact">
-            <h1 class="touch">Get in Touch</h1>
-            <div class="contact-container">
-                <div class="dev_info">
-                    <h2>Contact Info</h2>
-                    <div class="mail-me">
-                        <img class="img-contact" src="https://i.ibb.co/ScP1vmZ/email.png" width="60" height="60" alt="">
-                        <div class="info-contact">
-                            <h2>Mail Me:</h2>
-                            <p>cpsiam221@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-me">
-                        <img class="img-contact" src="https://i.ibb.co/1XvKPsj/telephone.png" width="60" height="60"
-                            alt="">
-                        <div class="info-contact">
-                            <h2>Contact Me:</h2>
-                            <p>+880 1902535169</p>
-                        </div>
-                    </div>
-                    <div class="location">
-                        <img class="img-contact" src="https://i.ibb.co/CV82dqC/icons8-location-100.png" width="60"
-                            height="60" alt="">
-                        <div class="info-contact">
-                            <h2>Location:</h2>
-                            <p>Dhaka Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="client_info">
-                    <h2>Let's Work Together</h2>
-                    <input class="input" type="text" value="Name*"><br>
-                    <input class="input" type="email" value="Email*"><br>
-                    <textarea id="area" class="input" name="message" id="">Your Message*</textarea><br>
-                    <input class="input" type="button" value="SEND MESSAGE"><br>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <h2>Copyright © 2025 Siam's Portfolio</h2>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+         ////////////////////////////////////////////////////////////////////////////
+         // Mode Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modeSwitch = document.getElementById('modeSwitch');
+    const body = document.body;
+    
+    // Check for saved mode preference or default to light mode
+    const savedMode = localStorage.getItem('portfolioMode') || 'light';
+    if (savedMode === 'space') {
+        modeSwitch.checked = true;
+        body.classList.add('space-mode');
+    }
+    
+    modeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            body.classList.add('space-mode');
+            localStorage.setItem('portfolioMode', 'space');
+            
+            // Add entrance animation
+            body.style.transition = 'all 0.8s ease';
+            setTimeout(() => {
+                body.style.transition = '';
+            }, 800);
+        } else {
+            body.classList.remove('space-mode');
+            localStorage.setItem('portfolioMode', 'light');
+            
+            // Add exit animation  
+            body.style.transition = 'all 0.8s ease';
+            setTimeout(() => {
+                body.style.transition = '';
+            }, 800);
+        }
+    });
+});
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+        // Typewriter effect
+        const texts = ['A Developer', 'An Engineer', 'A Dreamer'];
+        let currentIndex = 0;
+        const changingText = document.getElementById('changing-text');
+
+        function changeText() {
+            changingText.style.opacity = '0';
+            setTimeout(() => {
+                changingText.textContent = texts[currentIndex];
+                changingText.style.opacity = '1';
+                currentIndex = (currentIndex + 1) % texts.length;
+            }, 500);
+        }
+
+        setInterval(changeText, 2000);
+        changeText(); // Initial call
+
+        // Navigation functions
+        function hamburg() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.transform = 'translateY(0px)';
+        }
+
+        function cancel() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.style.transform = 'translateY(-500px)';
+        }
+
+        // Activities Section JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const activities = [
+                {
+                    title: "Sports",
+                    description: "Another achievement from my university for the first time. Got 2nd runner up prize at table tennis 😃💖 #sports_in_university",
+                    image: "assets/extraactivities/medal.jpeg"
+                },
+                {
+                    title: "Hult Prize On campus 2023-2024",
+                    description: "My first time hult participation gone incredible. TEAM: BIOME🔥 incredible achievements of these outstanding teams who have made it to the 𝐓𝐨𝐩 𝟓 in the Hult Prize Competition.",
+                    image: "assets/extraactivities/hultparticipate.jpeg"
+                },
+                {
+                    title: "NASA Space App Challenge 2024",
+                    description: "NASA Space App Challenge 2024 was remarkable. Out of 500 projects, 3000 students across 9 divisions we were honored to be selected as one of the top 50, earning a physical invitation to AIUB",
+                    image: "assets/extraactivities/Nasa Spaceapp team.jpeg"
+                },
+                {
+                    title: "Certificate of Recognition: Galactic Problem Solver",
+                    description: "🌟 Proud to be recognized as a Galactic Problem Solver! 🚀",
+                    image: "assets/extraactivities/certificationfornasa.jpeg"
+                },
+                {
+                    title: "Certificate of Achievement Generating Instant App Idea",
+                    description: "had been recognized as one of the winners at the workshop “Empowering Developers: Publish, Monetize, and Excel with Banglalink AppLink”, organized by IEEE IIUC Women in Engineering (WIE) Affinity Group in collaboration with IEEE IIUC Student Branch.",
+                    image: "assets/extraactivities/banglalink.jpeg"
+                },
+
+                {
+                    title: "EDGE Project: Mobile App Development Training Achievement",
+                    description: "Thrilled to have survived among the best students and been shortlisted in the CBI-017 training, gaining invaluable skills under the guidance of Radiathun Tasnia and mentor Sourav Palit. Journey of survival for long 6 months 💻📱",
+                    image: "assets/extraactivities/edgetraining.jpeg"
+                },
+
+                {
+                    title: "🤖 Robotics for Climate Change & Assistive Tech-IEEE WIE Bangladesh Summit 2024",
+                    description: "Excited to be selected as one of the top 15 finalists nationwide for my idea at BUET!",
+                    image: "assets/extraactivities/buet.jpeg"
+                },
+
+                {
+                    title: "Hult Prize 2025 – IIUC Journey",
+                    description: "Thrilled to join the Organizing Committee as a Creative Design & Group Associate Member! 🎨✨",
+                    image: "assets/extraactivities/hultcomettie.jpeg"
+                },
+
+                 {
+                    title: "Award of Recognition: Best Performer – Organizing Committee Member",
+                    description: "honored to be awarded Best Performer - Organizing Committee Member and Best Graphics & Creative Designer for my role as Associate Creative Designer at the Hult Prize 2024-25, IIUC Campus.",
+                    image: "assets/extraactivities/recognizedas_best_oncampus_organizing_comette_member.jpeg"
+                },
+
+                {
+                    title: "Certificate of Achievement : EDGE-CSE CUET Digital Skills Training",
+                    description: "Thrilled to successfully complete the training and celebrate this accomplishment at the Certificate Awarding Ceremony! 🥳",
+                    image: "assets/extraactivities/edge_certification.jpeg"
+                },
+
+                {
+                    title: "Executive Committee Member – IIUC Female Competitive Programming Society (IIUCFCPS)",
+                    description: "I'm thrilled to share that the new Executive Committee of the IIUC Female Competitive Programming Society (IIUCFCPS) for Spring 2025 has officially been introduced — and I'm honored to be part of it as the Design Secretary! ",
+                    image: "assets/extraactivities/iiucfcps.jpeg"
+                },
+
+                 {
+                    title: "Glory Girl",
+                    description: "Officially selected as a Campus Ambassador for the Glory Girls Tech Fest by ICT Olympiad Bangladesh! 💫 ",
+                    image: "assets/extraactivities/glorygirl.jpeg"
+                },
+
+
+                 {
+                    title: "Qualified for the Grand Finale of ICT Olympiad Bangladesh Season-2",
+                    description: "Grateful for the recognition of my hard work and dedication, earning a spot among the top university-level participants in the CSE/CS/IT/EE category. 💻✨",
+                    image: "assets/extraactivities/icto.jpeg"
+                },
+
+
+
+
+
+            ];
+
+            const activityImg = document.getElementById('activity-img');
+            const activityTitle = document.getElementById('activity-title');
+            const activityDescription = document.getElementById('activity-description');
+            const currentActivitySpan = document.getElementById('current-activity');
+            const totalActivitiesSpan = document.getElementById('total-activities');
+
+            let currentActivityIndex = 0;
+
+            function updateActivityDisplay() {
+                const activity = activities[currentActivityIndex];
+                activityImg.src = activity.image;
+                activityTitle.textContent = activity.title;
+                activityDescription.textContent = activity.description;
+                currentActivitySpan.textContent = currentActivityIndex + 1;
+                totalActivitiesSpan.textContent = activities.length;
+            }
+
+            window.nextActivity = function() {
+                currentActivityIndex = (currentActivityIndex + 1) % activities.length;
+                updateActivityDisplay();
+            };
+
+            window.previousActivity = function() {
+                currentActivityIndex = (currentActivityIndex - 1 + activities.length) % activities.length;
+                updateActivityDisplay();
+            };
+
+            updateActivityDisplay(); // Show first activity
+
+            // Auto-rotate activities every 5 seconds
+            setInterval(() => {
+                window.nextActivity();
+            }, 5000);
+        });
+    </script>
 </body>
-
 </html>
